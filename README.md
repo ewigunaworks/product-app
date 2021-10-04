@@ -25,6 +25,8 @@ bundle exec sidekiq
 rails s
 ```
 
+Don't forget to setup the smtp config on development.rb file
+
 ## Collection
 The postman collection attached on project 
 ```product-app.postman_collection.json ```
