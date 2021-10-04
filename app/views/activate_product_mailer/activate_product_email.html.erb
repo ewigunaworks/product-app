@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <title>Aktifasi Produk Berhasil</title>
+</head>
+<body>
+    <h1>Hi, <%= @user.name %></h1>
+    <p>
+        Berikut ini adalah produk yang baru saja Anda tambahkan:
+        <br/>
+    </p>
+    <table style="width: 50%;" border="1" cellpadding="2">
+      <tbody>
+        <tr>
+          <td>Nama Produk :</td>
+          <td><%= @product.name %></td>
+        </tr>
+        <tr>
+          <td>Harga :</td>
+          <td><%= @product.price %></td>
+        </tr>
+        <tr>
+          <td>Kategori :</td>
+          <td><%= @product.category %></td>
+        </tr>
+        <tr>
+          <td>Gambar Produk :</td>
+          <td>
+            <% if @product.images.attached? %>
+              <%= image_tag @product.images.variant(resize_to_limit: [100, 100])%>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td>Status Aktif :</td>
+          <td><%= @product.is_active == true ? "Aktif" : "Tidak Aktif" %></td></td>
+        </tr>
+      </tbody>
+    </table>
+</body>

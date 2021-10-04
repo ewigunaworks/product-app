@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "22b8693b-ceb4-4105-a21b-407408d55804",
+		"name": "product-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "index list"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Susu Kotak Putih",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "7000",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "dairy",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/erwin/Downloads/logo AP plus@3x.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "create new product"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				},
+				"description": "delete product"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				},
+				"description": "show detail product"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Susu Kotak Putih",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "7500",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "dairy",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				},
+				"description": "update product"
+			},
+			"response": []
+		}
+	]
+}
