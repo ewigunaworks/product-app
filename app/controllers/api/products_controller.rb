@@ -25,7 +25,7 @@ class Api::ProductsController < ApplicationController
     @products = Product.new(product_params)
 
     if @products.save
-      ActivateProductJob.set(wait: 1.minutes).perform_later(@products, users)
+      ActivateProductJob.set(wait: 3.minutes).perform_later(@products, users)
       data = {
         status: true,
         code: 200,
